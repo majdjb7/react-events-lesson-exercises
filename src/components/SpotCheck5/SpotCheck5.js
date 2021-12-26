@@ -21,11 +21,16 @@ class SpotCheck5 extends Component {
 
   markComplete = text => {
     let choresLeft = [...this.state.tasks]
-    choresLeft.find(c => c.text === text).complete == true
+    choresLeft.find(t => t.text === text).complete = true
 
     this.setState({
       tasks: choresLeft
     })
+  }
+  markComplete = text => {
+    let tasks = [...this.state.tasks]
+    tasks.find(t => t.text === text).complete = true
+    this.setState({ tasks }) //remember that when your key and value have the same name, you can use this shortcut
   }
 
   render() {
