@@ -27,9 +27,9 @@ class Exercise1 extends Component {
   render() {
     return (
       <div >
-        <button class="back" onClick={this.shiftImageBack}>Back</button>
+        <button className="back" onClick={this.shiftImageBack}>Back</button>
         <img src={this.state.images[this.state.currentImg]}></img>
-        <button class="forward" onClick={this.shiftImageForward}>Forward</button>
+        <button className="forward" onClick={this.shiftImageForward}>Forward</button>
 
         {/* render two buttons with the classes "back" and "forward",
            and the image at index currentImg, in an img tag */}
